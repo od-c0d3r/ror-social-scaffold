@@ -1,11 +1,11 @@
 <section class="user-section">
   <%= gravatar_for @user %>
   <h2><%= "Name: #{@user.name}" %></h2>
-  <% if @user != current_user && is_friend?(@user) && (request_sent?(@user) == false) %>
+  <% if @user != current_user && friend?(@user) && (request_sent?(@user) == false) %>
       <%= link_to 'Add Friend', friendships_path(:friendship => {:friend_id => @user.id}),method: :post, class: 'profile-link profile-link-btn' %>  
-    <% elsif @user != current_user && (request_sent?(@user) == true) && !is_friend?(@user) %>
+    <% elsif @user != current_user && (request_sent?(@user) == true) && !friend?(@user) %>
         <%= link_to 'Request sent', '#', class: 'profile-link profile-link-btn' %>
-    <% elsif is_friend?(@user) && @user != current_user %>
+    <% elsif friend?(@user) && @user != current_user %>
             <h6>he is a friend</h6>
 
     <% end%>
