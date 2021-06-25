@@ -14,7 +14,13 @@
 
 ## Getting Started
 
-To get a local copy up and running follow these simple example steps.
+
+To get started with the app, first clone the repo and `cd` into the directory:
+
+```
+$ git clone https://github.com/od-c0d3r/ror-social-scaffold.git
+$ cd ror-social-scaffold
+```
 
 ### Prerequisites
 
@@ -24,7 +30,7 @@ Postgres: >=9.5
 
 ### Setup
 
-Instal gems with:
+Install gems with:
 
 ```
 bundle install
@@ -63,31 +69,43 @@ Open `http://localhost:3000/` in your browser.
     rpsec --format documentation
 ```
 
-> Tests will be added by Microverse students. There are no tests for initial features in order to make sure that students write all tests from scratch.
-
 ### Deployment
+To deploy the sample app to production, you’ll need a Heroku account
 
-TBA
+To deploy this version of the app, you’ll need to create a new Heroku application, switch to the right branch, push up the source, run the migrations, and seed the database with sample users:
+
+```
+$ heroku create
+$ git checkout updating-users
+$ git push heroku updating-users:master
+$ heroku run rails db:migrate
+$ heroku run rails db:seed
+```
+
+Visiting the URL returned by the original `heroku create` should now show you the sample app running in production. 
 
 ## Authors
 
-TBA
+👤 **Tanzila**
+
+![Tanzila's GitHub stats](https://github-readme-stats.vercel.app/api?username=tanzila-abedin&count_private=true&theme=dark&show_icons=true)
+
+- GitHub: [@githubhandle](https://github.com/tanzila-abedin)
+- Twitter: [@twitterhandle](https://twitter.com/TanzilaAbedin)
+- LinkedIn: [Profile](https://www.linkedin.com/in/tanzila-abedin-331440b2/)
+
+👤 **Omar R.**
+
+
+- GitHub: [@od-c0d3r](https://github.com/od-c0d3r)
+- Twitter: [@od-coder](https://twitter.com/od_coder)
+- LinkedIn: [Profile](https://linkedin.com/in/omarrashad)
 
 ## 🤝 Contributing
 
 Contributions, issues and feature requests are welcome!
 
-Feel free to check the [issues page](issues/).
-
 ## Show your support
 
 Give a ⭐️ if you like this project!
-
-## Acknowledgments
-
-TBA
-
-## 📝 License
-
-TBA
 
