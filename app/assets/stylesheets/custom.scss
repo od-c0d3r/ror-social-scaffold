@@ -155,10 +155,6 @@ form {
       padding: 8px;
       background-color: $primary-color-light;
     }
-
-    input[type="checkbox"] {
-      width: fit-content;
-    }
   }
 
   .actions {
@@ -289,15 +285,16 @@ form {
     font-size: 0.8em;
     margin: 0 0 8px 0;
     color: $primary-color-dark;
-    
   }
+
   .profile-link-btn {
     border: 1px gray solid;
     padding: 5px;
     border-radius: 5px;
+
     :hover {
       border: 1px black solid;
-      background-color:lightgray ;
+      background-color: lightgray;
       color: white;
     }
   }
@@ -358,11 +355,3 @@ form {
     width: 50%;
   }
 }
-
-// .gravatar {
-//   float: left;
-//   margin-right: 10px;
-// }
-// .gravatar_edit {
-//   margin-top: 15px;
-// }
