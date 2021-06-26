@@ -14,8 +14,8 @@ feature 'User can' do
 
   scenario 'create a post' do
     visit root_path
-    fill_in "post_content",	with: "this is my post" 
-    click_on "Save"
+    fill_in 'post_content', with: 'this is my post'
+    click_on 'Save'
     expect(page).to have_content('this is my post')
   end
 
@@ -25,5 +25,4 @@ feature 'User can' do
     expect(page).to have_link('See Profile')
     expect(page).to have_link('Add Friend')
   end
-
 end
