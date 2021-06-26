@@ -23,8 +23,6 @@
         <%= sender.name %> sent you a request. <br>
         <%= link_to 'Accept', friendship_path(request.id),method: :patch %>
         <%= link_to 'Ignore', friendship_path(request.id),method: :delete %>
-
-
     <% end %>
 <% end %>
 
