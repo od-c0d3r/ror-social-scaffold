@@ -1,16 +1,23 @@
+
+
 <li>
 <% if !me?(user) %>
+<tbody>
+<tr>
   <% @user = user %>
-  <%= gravatar_for @user %>
-  Name: <%= @user.name %>  | id: <%= @user.id %>
+  <td><%= gravatar_for @user %> <br>
+   <%= @user.name %> </td>
+  <td> <%= @user.id %> </td>
   
   <span class="profile-link">
-  <%= link_to 'See Profile',  user_path(@user), class: 'profile-link' %>  
+  <td><%= link_to 'See Profile',  user_path(@user), class: 'profile-link profile-link-btn' %><br> <br>
       <% if !friend?(@user)%>
         <%= link_to 'Add Friend',friendships_path(:friendship => {:friend_id => @user.id}),
                                                                     method: :post,
-                                                                     class: 'profile-link profile-link-btn' %>
+                                                                     class: 'profile-link profile-link-btn' %> </td>
       <% end %>
   </span>
   <% end %>
+  </tr>
+  </tbody>
 </li>

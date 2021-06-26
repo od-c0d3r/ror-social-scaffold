@@ -2,7 +2,7 @@
   <table class="table table-striped">
     <thead>
       <tr>
-        <th colspan="3" class="page-header">
+        <th colspan="5" class="page-header">
           <h2>My Friends</h2>
         </th>
       </tr>
@@ -24,8 +24,11 @@
           <td> <%= user.name %></td>
           <td> <%= user.email %></td>
           <td>
-            <%= link_to "View Profile", user_path(user), class: "btn btn-primary btn-xs" %>
-            | <%= link_to "Remove Friend", friendship_path(relationship.id), method: :delete,
+          <br>
+            <%= link_to "View Profile", user_path(user), class: "btn btn-primary"%> 
+            <br>
+            <br>
+             <%= link_to "Remove Friend", friendship_path(relationship.id), method: :delete,
               data: { confirm: "Are you sure?" }, class: "btn btn-xs btn-danger" %>
           </td>
         </tr>

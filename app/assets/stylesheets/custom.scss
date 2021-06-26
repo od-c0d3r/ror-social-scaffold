@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,700,900&display=swap");
 
-$primary-color-dark: #689f38;
-$primary-color: #8bc34a;
+$primary-color-dark: #389c9f;
+$primary-color: #4ac3b9;
 $primary-color-light: #dcedc8;
 $primary-color-text: #212121;
 $divider-color: #bdbdbd;
@@ -271,33 +271,52 @@ form {
   }
 }
 
-.users-section {
-  width: 100%;
-  margin: 10px;
+.btn {
+  font-size: 0.9em;
+  margin: 0 0 8px 0;
+  color: $primary-color-dark;
+  border: 1px gray solid;
+  padding: 2px;
+  border-radius: 5px;
+}
 
-  .users-list li {
-    margin-bottom: 16px;
-    text-transform: capitalize;
-    font-size: 1.2em;
+.btn-danger {
+  color: red;
+}
+
+.profile-link {
+  font-size: 0.8em;
+  margin: 0 0 8px 0;
+  color: $primary-color-dark;
+}
+
+.profile-link-btn {
+  border: 1px gray solid;
+  padding: 5px;
+  border-radius: 5px;
+
+  :hover {
+    border: 1px black solid;
+    background-color: lightgray;
+    color: white;
   }
+}
 
-  .profile-link {
-    font-size: 0.8em;
-    margin: 0 0 8px 0;
-    color: $primary-color-dark;
-  }
+table {
+  border-spacing: 0;
+}
 
-  .profile-link-btn {
-    border: 1px gray solid;
-    padding: 5px;
-    border-radius: 5px;
+th {
+  background-color: $primary-color;
+  color: white;
+}
 
-    :hover {
-      border: 1px black solid;
-      background-color: lightgray;
-      color: white;
-    }
-  }
+th,
+td {
+  width: 150px;
+  text-align: center;
+  border: 1px solid rgb(209, 209, 209);
+  padding: 5px;
 }
 
 .user-section {

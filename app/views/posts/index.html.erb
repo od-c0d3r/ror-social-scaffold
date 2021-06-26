@@ -1,4 +1,4 @@
-<div class="grav-img"><%= gravatar_for current_user %></div><%= current_user.name %><%= current_user.id %>
+<div class="grav-img"><%= gravatar_for current_user %></div><strong><%= current_user.name %></strong>
 
 <%= form_for(@post) do |form| %>
   <%= form.label :content %>
