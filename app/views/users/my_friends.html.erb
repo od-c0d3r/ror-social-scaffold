@@ -1,5 +1,3 @@
-<%# code from lastnight %>
-
 <% if @friendships.size > 0 %>
   <table class="table table-striped">
     <thead>
@@ -16,10 +14,10 @@
     </thead>
     <tbody>
       <% @friendships.each do |relationship| %>
-      <% if current_user.id == relationship.friend_id %>
-        <% friend_id = relationship.user_id  %>
-      <% else %>
-        <% friend_id = relationship.friend_id  %>
+      <% if relationship.user_id == current_user.id %>
+        <% friend_id = relationship.friend_id %>
+        <% else %>
+        <% friend_id = relationship.user_id %>
       <% end %>
       <% user = User.find_by(id: friend_id) %>
         <tr> 

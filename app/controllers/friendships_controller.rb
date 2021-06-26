@@ -10,8 +10,7 @@ class FriendshipsController < ApplicationController
 
   def update
     @friendship = Friendship.find(params[:id])
-    @friendship.confirmed = true
-    @friendship.save
+    @friendship.confirm_friend
     redirect_to my_friends_path
   end
 

@@ -13,6 +13,7 @@ class UsersController < ApplicationController
   def my_friends
     @friendships = Friendship.where(user_id: current_user.id, confirmed: true)
     @friendships += Friendship.where(friend_id: current_user.id, confirmed: true)
+    @friendships.compact
   end
 
   def requests
