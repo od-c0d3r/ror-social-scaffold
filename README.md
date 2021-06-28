@@ -2,6 +2,12 @@
 
 > This repo includes intial code for social media app with basic styling. Its purpose is to be a starting point for Microverse students.
 
+>  To visit, click here : https://intense-hamlet-58342.herokuapp.com/
+
+| Timeline | Pending | Friends | All Users
+| --- | --- | --- | --- |
+| ![](docs/timeline.png) | ![](docs/pending.png) | ![](docs/my_friends.png) | ![](docs/all_users.png)
+
 ## Database Model
 
 <img src="docs/social-media-erd.png">
