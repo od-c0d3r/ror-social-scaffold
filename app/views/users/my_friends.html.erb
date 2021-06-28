@@ -28,7 +28,10 @@
             <%= link_to "View Profile", user_path(user), class: "btn btn-primary"%> 
             <br>
             <br>
-             <%= link_to "Remove Friend", friendship_path(relationship.id), method: :delete,
+            <% friendship_id = Friendship.find_by(user_id: current_user.id,friend_id: friend_id) %>
+            <% inverse_friendship = Friendship.find_by(user_id: friend_id, friend_id: current_user.id) %>
+
+             <%= link_to "Remove Friend", friendship_path([friendship_id.id, inverse_friendship.id]), method: :delete,
               data: { confirm: "Are you sure?" }, class: "btn btn-xs btn-danger" %>
           </td>
         </tr>
