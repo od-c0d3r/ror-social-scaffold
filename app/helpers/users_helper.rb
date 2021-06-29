@@ -7,7 +7,6 @@ module UsersHelper
     value1 = Friendship.where(user_id: current_user.id, friend_id: user.id, confirmed: true)
     value2 = Friendship.where(user_id: user.id, friend_id: current_user.id, confirmed: true)
     !!(value1.present? || value2.present?)
-    # debugger
   end
 
   def gravatar_for(user)
