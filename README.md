@@ -84,8 +84,8 @@ To deploy this version of the app, you’ll need to create a new Heroku applicat
 
 ```
 $ heroku create
-$ git checkout updating-users
-$ git push heroku updating-users:master
+$ git checkout master
+$ git push heroku master
 $ heroku run rails db:migrate
 $ heroku run rails db:seed
 ```
@@ -106,7 +106,7 @@ Visiting the URL returned by the original `heroku create` should now show you th
 
 
 - GitHub: [@od-c0d3r](https://github.com/od-c0d3r)
-- Twitter: [@od-coder](https://twitter.com/od_coder)
+- Twitter: [@od_coder](https://twitter.com/od_coder)
 - LinkedIn: [Profile](https://linkedin.com/in/omarrashad)
 
 ## 🤝 Contributing
