@@ -1,4 +1,4 @@
-<% if @friendships.size > 0 %>
+<% if @user_friends.size > 0 %>
   <table class="table table-striped">
     <thead>
       <tr>
@@ -13,29 +13,22 @@
       </tr>
     </thead>
     <tbody>
-      <% @friendships.each do |relationship| %>
-      <% if relationship.user_id == current_user.id %>
-        <% friend_id = relationship.friend_id %>
-        <% else %>
-        <% friend_id = relationship.user_id %>
-      <% end %>
-      <% user = User.find_by(id: friend_id) %>
+      <% @user_friends.each do |friend| %>
+
         <tr> 
-          <td> <%= user.name %></td>
-          <td> <%= user.email %></td>
+          <td> <%= friend.name %></td>
+          <td> <%= friend.email %></td>
           <td>
           <br>
-            <%= link_to "View Profile", user_path(user), class: "btn btn-primary"%> 
+            <%= link_to "View Profile", friend, class: "btn btn-primary"%> 
             <br>
             <br>
-            <% friendship_id = Friendship.find_by(user_id: current_user.id,friend_id: friend_id) %>
-            <% inverse_friendship = Friendship.find_by(user_id: friend_id, friend_id: current_user.id) %>
 
-             <%= link_to "Remove Friend", friendship_path([friendship_id.id, inverse_friendship.id]), method: :delete,
+             <%= link_to "Remove Friend", friendship_path(ids(friend)), method: :delete,
               data: { confirm: "Are you sure?" }, class: "btn btn-xs btn-danger" %>
           </td>
         </tr>
-      <% end %>
+        <%end%>
     </tbody>
   <table>  
 <% else %>

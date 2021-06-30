@@ -18,4 +18,11 @@ module UsersHelper
   def me?(user)
     current_user == user
   end
+
+  def ids(user)
+    friendship_id = Friendship.find_by(user_id: current_user.id,friend_id: user.id)
+    inverse_friendship = Friendship.find_by(user_id: user.id, friend_id: current_user.id)
+    return [friendship_id,inverse_friendship]
+  end
+
 end
