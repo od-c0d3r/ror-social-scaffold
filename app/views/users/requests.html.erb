@@ -1,12 +1,11 @@
 
 <h3 class= "request-header"><%= "Friend Requests" %></h3>
 
-<% if @friend_requests.nil? || @friend_requests.empty? %> <br><br>
+<% if  @inverted_friendships.empty? %> <br><br>
     <p>No Friend Request Found<p>
 <% else %>
-    <% @friend_requests.each do |request| %>
-        <% sender = User.find(request.user_id) %>
-        <%= sender.name %> sent you a request. <br>
+    <% @inverted_friendships.each do |request| %>
+        <%= request.user.name %> sent you a request. <br>
         <%= link_to 'Accept', friendship_path(request.id),method: :patch , class: "btn btn-primary" %>
         <%= link_to 'Ignore', friendship_path(request.id),method: :delete, class: "btn btn-danger" %>
     <% end %>
@@ -16,11 +15,10 @@
 
 <h3  class= "request-header"><%= "Sent Requests" %></h3> <br>
 
-<% if @pending_requests.empty? %>
+<% if @pending_friends.empty? %>
     <p>Add Few friends! meh<p>
 <% else %>
-    <% @pending_requests.each do |request| %>
-        <% friend = User.find(request.friend_id) %><br>
+    <% @pending_friends.each do |friend| %>
        <strong><%= friend.name %>:</strong>pending request<br>
     <% end %>
 <% end %>

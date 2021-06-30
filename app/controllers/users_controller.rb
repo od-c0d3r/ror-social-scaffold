@@ -15,7 +15,7 @@ class UsersController < ApplicationController
   end
 
   def requests
-    @pending_requests = current_user.pending_friendships
-    @friend_requests = current_user.inverted_friendships
+    @pending_friends = current_user.pending_friends
+    @inverted_friendships = current_user.inverted_friendships
   end
 end
