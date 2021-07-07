@@ -98,8 +98,8 @@ Visiting the URL returned by the original `heroku create` should now show you th
 
 ![Tanzila's GitHub stats](https://github-readme-stats.vercel.app/api?username=tanzila-abedin&count_private=true&theme=dark&show_icons=true)
 
-- GitHub: [@githubhandle](https://github.com/tanzila-abedin)
-- Twitter: [@twitterhandle](https://twitter.com/TanzilaAbedin)
+- GitHub: [@tanzila-abedin](https://github.com/tanzila-abedin)
+- Twitter: [@TanzilaAbedin](https://twitter.com/TanzilaAbedin)
 - LinkedIn: [Profile](https://www.linkedin.com/in/tanzila-abedin-331440b2/)
 
 👤 **Omar R.**
