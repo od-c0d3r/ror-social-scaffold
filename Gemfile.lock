@@ -107,6 +107,8 @@ GEM
     jbuilder (2.11.5)
       actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
+    json-schema (2.8.1)
+      addressable (>= 2.4)
     jwt (2.3.0)
     listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
@@ -190,6 +192,19 @@ GEM
       rspec-mocks (~> 3.10)
       rspec-support (~> 3.10)
     rspec-support (3.11.0)
+    rswag (2.5.1)
+      rswag-api (= 2.5.1)
+      rswag-specs (= 2.5.1)
+      rswag-ui (= 2.5.1)
+    rswag-api (2.5.1)
+      railties (>= 3.1, < 7.1)
+    rswag-specs (2.5.1)
+      activesupport (>= 3.1, < 7.1)
+      json-schema (~> 2.2)
+      railties (>= 3.1, < 7.1)
+    rswag-ui (2.5.1)
+      actionpack (>= 3.1, < 7.1)
+      railties (>= 3.1, < 7.1)
     rubocop (1.25.1)
       parallel (~> 1.10)
       parser (>= 3.1.0.0)
@@ -269,6 +284,7 @@ DEPENDENCIES
   puma (~> 3.12)
   rails (~> 5.2.4)
   rspec-rails
+  rswag
   rubocop
   sass-rails (~> 5.0)
   spring

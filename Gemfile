@@ -28,7 +28,9 @@ gem 'jbuilder', '~> 2.5'
 # gem 'bcrypt', '~> 3.1.7'
 # Install wdm Gem if the platform is Windows
 
+gem 'devise'
 gem 'jwt'
+gem 'rswag'
 
 gem 'wdm', '>= 0.1.0' if Gem.win_platform?
 # Use ActiveStorage variant
@@ -39,8 +41,6 @@ gem 'wdm', '>= 0.1.0' if Gem.win_platform?
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
-
-gem 'devise'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
