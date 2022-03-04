@@ -28,7 +28,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'bcrypt', '~> 3.1.7'
 # Install wdm Gem if the platform is Windows
 
-gem 'jwt',
+gem 'jwt'
 
 gem 'wdm', '>= 0.1.0' if Gem.win_platform?
 # Use ActiveStorage variant
