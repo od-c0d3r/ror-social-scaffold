@@ -7,14 +7,13 @@ Rails.application.routes.draw do
   mount Rswag::Ui::Engine => '/api-docs'
   mount Rswag::Api::Engine => '/api-docs'
   devise_for :users
+
   namespace :api do
     namespace :v1 do
-      post :auth, to: "authentication#create"
-      post :register, to: "registration#create"
-      resources :posts, only: [:index, :create] do
-        resources :comments, only: [:create, :index]
+      resources :posts, only: [:index] do
+        resources :comments, only: [:index, :create]
       end
-    end 
+    end
   end
 
   resources :users, only: [:index, :show]
