@@ -15,7 +15,7 @@ module Api
         authenticate_with_http_basic do |email, password|
           user = User.find_by(email: email.downcase)
 
-          if user && user.authenticate(password)
+          if user && user.valid_password?(password)
             @current_user = user
           else
             head :unauthorized

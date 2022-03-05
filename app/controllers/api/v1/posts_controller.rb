@@ -2,7 +2,7 @@ module Api
   module V1
       class PostsController < ApiController
           def index
-              timeline_posts
+              @posts = timeline_posts
           end
 
           private
