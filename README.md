@@ -113,6 +113,10 @@ Visiting the URL returned by the original `heroku create` should now show you th
 
 Contributions, issues and feature requests are welcome!
 
+## Helpfull Resources 
+
+- [Link 1](https://stackoverflow.com/questions/4838525/rails-devise-authenticate-method-in-custom-controller) ~ Replace authintcate with vaild_password?
+
 ## Show your support
 
 Give a ⭐️ if you like this project!

@@ -1,9 +1,9 @@
 json.posts @posts do |post|
-  json.id post.id
+  json.id post[0].id
   json.user do
-    json.id post.user.id
-    json.name post.user.name
+    json.id post[0].user.id
+    json.name post[0].user.name
   end
-  json.content post.content
-  json.created_at post.created_at
+  json.content post[0].content
+  json.created_at post[0].created_at
 end
